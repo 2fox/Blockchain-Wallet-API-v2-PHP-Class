@@ -1,8 +1,13 @@
 <?php
-use twofox\blockchain;
 
-$myWallet = new Blockchain("ID", "pass1", "pass2");
+include_once __DIR__.'/src/Blockchain.php';
 
-$genAddress = $myWallet->getWalletBalance();
+$myWallet = new Blockchain("0c497311-7871-4279-b668-adb167862191", "sikEon,6PN'riGh<f~>8");
+
+$recipients = [
+				'1JzSZFs2DQke2B3S4pBxaNaMzzVZaG4Cqh' => '100000000'
+			  ];
+
+$genAddress = $myWallet->sendCoinsMulti($recipients);
 
 print_r($genAddress);

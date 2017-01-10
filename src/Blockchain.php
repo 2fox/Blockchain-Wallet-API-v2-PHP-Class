@@ -226,7 +226,10 @@ class Blockchain
 		if(count($arg) > 0)
 			$api_url.= '?'.http_build_query($arg);
 		
-        return json_decode(file_get_contents($api_url));
+		if($response = @file_get_contents($api_url))
+        	return json_decode($response, 1);
+		else 
+			return false;
     }
 }
 

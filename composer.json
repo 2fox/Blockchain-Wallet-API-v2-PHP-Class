@@ -1,0 +1,17 @@
+{
+    "name": "2fox/Blockchain-Wallet-API-v2-PHP-Class",
+    "description": "Blockchain-Wallet-API-v2-PHP-Class",
+    "authors": [
+        {
+            "name": "2fox team",
+            "email": "support@2fox.org",
+            "homepage": "http://2fox.org",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "twofox\\blockchain\\": "src"
+        }
+    }
+}
